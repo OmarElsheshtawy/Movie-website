@@ -1,0 +1,257 @@
+/* Wishlist Page Styles */
+.wishlist-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.wishlist-hero {
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  margin-bottom: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.wishlist-hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.wishlist-browse-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background: linear-gradient(45deg, #fbd500, #ff6b35);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(251, 213, 0, 0.3);
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.wishlist-browse-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(251, 213, 0, 0.4);
+  background: linear-gradient(45deg, #ff6b35, #fbd500);
+}
+
+.wishlist-browse-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(251, 213, 0, 0.3);
+}
+
+.wishlist-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.wishlist-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.wishlist-movie-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.wishlist-movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.wishlist-movie-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.wishlist-movie-card:hover img {
+  transform: scale(1.05);
+}
+
+.wishlist-movie-info {
+  padding: 20px;
+  position: relative;
+}
+
+.wishlist-title-heart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.wishlist-title-heart h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.wishlist-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.wishlist-heart-icon {
+  color: #ff6b35;
+  font-size: 2.5rem;
+  animation: heartBeat 2s infinite;
+  filter: drop-shadow(0 2px 4px rgba(255, 107, 53, 0.3));
+}
+
+.wishlist-delete-icon {
+  color: #ff4444;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 5px;
+  border-radius: 50%;
+  background: rgba(255, 68, 68, 0.1);
+}
+
+.wishlist-delete-icon:hover {
+  background: rgba(249, 0, 0, 0.2);
+  transform: scale(1.1);
+  color: #ff0000;
+}
+
+.wishlist-delete-icon:active {
+  transform: scale(0.95);
+}
+
+.wishlist-movie-info p {
+  color: #666;
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.wishlist-movie-info span {
+  color: #ff6b35;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Empty state styles */
+.wishlist-empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: #666;
+}
+
+.wishlist-empty-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.1);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(1);
+  }
+}
+@media (max-width: 768px) {
+  .wishlist-hero h1 {
+    font-size: 2rem;
+  }
+
+  .wishlist-hero p {
+    font-size: 1.1rem;
+  }
+
+  .wishlist-section {
+    padding: 20px;
+  }
+
+  .wishlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .wishlist-movie-card img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wishlist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wishlist-movie-card img {
+    height: 300px;
+  }
+}
